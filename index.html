@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery网页扫雷</title>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+</head>
+<body>
+    <!-- 完整游戏区 -->
+    <div id="game">
+        <!-- 功能区 -->
+        <div id="banner-region">
+            <!-- 状态图标 -->
+            <div id="face-img"></div>
+            <!-- 雷数 -->
+            <div id="mine-count">
+                <img src="./images/d0.bmp" id="flagx">
+                <img src="./images/d1.bmp" id="flagy">
+                <img src="./images/d0.bmp" id="flagz">
+            </div>
+            <!-- 时间 -->
+            <div id="time">
+                <img src="./images/d0.bmp" id="timex">
+                <img src="./images/d0.bmp" id="timey">
+                <img src="./images/d0.bmp" id="timez">
+            </div>
+        </div>
+        <!-- 扫雷区 -->
+        <div id="game-region"></div>
+    </div>
+</body>
+</html>
