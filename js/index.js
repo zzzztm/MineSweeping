@@ -21,11 +21,10 @@ $(document).bind("contextmenu",function(){
     return false;
 });
 
-// 单机表情图片刷新游戏
+// 单击表情图片刷新游戏
 $(document).on("mousedown", "#face-img", function(){
     $("#face-img").css("border-style", 'inset');
     window.location.reload();
-    // $("#face-img").css("background-image", "url(images/face_fail.bmp)")
 });
 
 function checkMine(event){
@@ -49,7 +48,11 @@ function onLeft(){
         // 显示所有雷的位置
         $(".isMine").addClass("show");
         // 点到的雷特殊显示
-        $(this).css({"border":"2px solid #9a9a9a", "width":"31px", "height":"31px", "background-image":"url(images/mine2.gif)","background-size":"cover"})
+        $(this).css({
+            "border":"2px solid #9a9a9a", 
+            "width":"31px", "height":"31px", 
+            "background-image":"url(images/mine2.gif)",
+            "background-size":"cover"})
         // 图标变为失败表情
         $("#face-img").css("background-image", "url(images/face_fail.bmp)")
         $("#game-region").addClass("down");
@@ -67,7 +70,10 @@ function onLeft(){
         }
         
         // 将雷数显示在该位置
-        $(this).css({"border":"2px solid #9a9a9a", "width":"31px", "height": "31px"})
+        $(this).css({
+            "border":"2px solid #9a9a9a", 
+            "width":"31px", 
+            "height": "31px"})
         $(this).text(n != 0 ? n : "");
         
         // 为不同雷数设置不同颜色
