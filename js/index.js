@@ -108,10 +108,13 @@ function onLeft(){
 
         // 如果所点区域为0, 则触发周围区域点击事件
         if(n == 0){
+            // 两个循环遍历周围8个区域
             for(var i = pos.x - 1; i <= pos.x + 1; i++){
                 for(var j = pos.y - 1; j <= pos.y + 1; j++){
-                    if($("#" + i + "-" + j).length != 0){
-                        if(!$("#" + i + "-" + j).data("check")){
+                    if($("#" + i + "-" + j).length != 0){               // 判断该位置是否存在方块(未超出范围)
+                        // 判断该位置是否已被点击过
+                        // 已被点击过则添加check标识，防止相离块互相重复遍历造成死循环
+                        if(!$("#" + i + "-" + j).data("check")){  
                             $("#" + i + "-" + j).data("check", true);
                             onLeft.call($("#" + i + "-" + j));
                         }

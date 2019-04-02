@@ -81,6 +81,7 @@ div{
     font-weight: bold;
     font-size: 25px;
     text-align: center;
+    display: table-cell;
     vertical-align: middle;
 }
 
